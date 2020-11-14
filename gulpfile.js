@@ -8,9 +8,15 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 
+const paths = {
+  style: './src/scss/**/*.scss',
+  js: './src/scripts/**/*.js',
+  img: './src/img/**/*.{jpg,jpeg,png,gif,svg}',
+};
+
 function style() {
   return gulp
-    .src('./src/scss/**/*.scss')
+    .src(paths.style)
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -20,24 +26,19 @@ function style() {
 
 function js() {
   return gulp
-    .src('./src/scripts/**/*.js')
+    .src(paths.js)
     .pipe(uglify())
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('./dist/scripts/'));
 }
 function img() {
-  return gulp
-    .src('./src/img/**/*.{jpg,jpeg,png,gif,svg}')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img/'));
+  return gulp.src(paths.img).pipe(imagemin()).pipe(gulp.dest('./dist/img/'));
 }
 function watch() {
-  gulp.watch('./src/scss/**/*.scss', style).on('change', browserSync.reload);
-  gulp.watch('./src/scripts/**/*.js', js).on('change', browserSync.reload);
+  gulp.watch(paths.style, style).on('change', browserSync.reload);
+  gulp.watch(paths.js, js).on('change', browserSync.reload);
   gulp.watch('./index.html').on('change', browserSync.reload);
-  gulp
-    .watch('./src/img/**/*.{jpg,jpeg,png,gif,svg}', img)
-    .on('change', browserSync.reload);
+  gulp.watch(paths.img, img).on('change', browserSync.reload);
   browserSync.init({
     server: {
       baseDir: './',
