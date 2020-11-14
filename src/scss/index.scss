@@ -1,7 +1,4 @@
 @import './reset';
 @import './variables';
 @import './base';
-
-body {
-  background: $red;
-}
+@import './sections/sections.scss';
