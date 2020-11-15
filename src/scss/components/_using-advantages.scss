@@ -1,0 +1,21 @@
+@import '../variables';
+.using-advantages {
+  &__list {
+    margin-bottom: 64px;
+  }
+  &__item {
+    margin-top: 36px;
+  }
+  &__item-img {
+    margin-bottom: 25px;
+  }
+  &__item-title {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+  &__item-text {
+    font-family: $font-lato;
+    font-size: 14px;
+    color: $color-light-gray;
+  }
+}
