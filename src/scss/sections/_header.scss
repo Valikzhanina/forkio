@@ -1,1 +1,75 @@
+@import '../variables';
+@import '../mixins';
 
+.header {
+  background: $bg-header no-repeat center;
+  background-size: cover;
+
+  &-navbar {
+    padding: 31px 0;
+    background: #27262a;
+
+    &-container {
+      @include flexible;
+    }
+
+    &__logo {
+      background-image: url(../img/header-logo.svg);
+      display: inline-block;
+      width: 43px;
+      height: 41px;
+      &:hover {
+        background-image: url(../img/header-logo-hover.svg);
+      }
+    }
+
+    &__btn {
+      padding: 11px 25px;
+    }
+  }
+
+  &-info {
+    text-align: center;
+    padding-top: 50px;
+
+    // &-container {
+    //   position: relative;
+    // }
+
+    &__app-heading {
+      color: $color-white;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    &__app-description {
+      color: $color-purple;
+      font-size: 18px;
+      margin: 19px 0 14px;
+    }
+
+    &__app-version {
+      color: $color-light-gray;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 394px;
+    }
+
+    &__download {
+      position: relative;
+      top: 48px;
+
+      &__btn {
+        display: inline-block;
+        font-size: 18px;
+        padding: 13px 29px;
+      }
+
+      &__info {
+        color: $color-light-gray;
+        font-size: 14px;
+        margin-top: 13px;
+      }
+    }
+  }
+}

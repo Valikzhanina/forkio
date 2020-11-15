@@ -1,0 +1,14 @@
+@import '../variables';
+
+.btn {
+  background-color: $color-purple;
+  color: $color-white;
+  border-radius: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-white;
+    color: $color-purple;
+  }
+}

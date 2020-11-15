@@ -2,8 +2,12 @@ body {
   font-family: $font-monserat;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
-  padding: 0 10px;
+  padding: 0 15px;
   margin: 0 auto;
 }

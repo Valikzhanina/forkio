@@ -1,0 +1,10 @@
+@mixin flexible {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin screen-s {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
