@@ -7,7 +7,7 @@
   &__title {
     @include screen-l {
       position: absolute;
-      right: 0;
+      right: 25px;
     }
   }
   &__list {
