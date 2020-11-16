@@ -16,11 +16,11 @@ const paths = {
 
 function style() {
   return gulp
-    .src(paths.style)
+    .src('./src/scss/index.scss')
     .pipe(sass())
+    .pipe(concat('styles.min.css'))
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(concat('styles.min.css'))
     .pipe(gulp.dest('./dist/css/'));
 }
 
