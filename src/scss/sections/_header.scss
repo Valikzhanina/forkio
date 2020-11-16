@@ -8,33 +8,123 @@
   &-navbar {
     padding: 31px 0;
     background: #27262a;
+    position: relative;
 
     &-container {
-      @include flexible;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      @include screen-m {
+        padding: 0 20px;
+      }
+
+      @include screen-l {
+        padding: 0 90px;
+      }
     }
 
     &__logo {
       background-image: url(../img/header-logo.svg);
-      display: inline-block;
       width: 43px;
       height: 41px;
+      grid-column: 1 / 2;
+
+      &--text {
+        display: none;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-purple;
+        padding-top: 12px;
+        padding-left: 60px;
+
+        @include screen-m {
+          display: inline-block;
+        }
+      }
+
       &:hover {
         background-image: url(../img/header-logo-hover.svg);
       }
     }
 
+    .menu {
+      position: absolute;
+      bottom: -352px;
+      left: 0;
+      width: calc(100% - 15px);
+
+      @include screen-m {
+        display: none;
+      }
+
+      &__item {
+        position: relative;
+        box-sizing: border-box;
+        margin-left: 15px;
+        background: #333333;
+        border-bottom: 3px solid #3b3b3b;
+        font-size: 26px;
+        color: $color-white;
+        height: 88px;
+        padding: 20px 0 21px 35px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 53px;
+          background: $color-purple;
+          left: 3px;
+          top: 16px;
+          opacity: 0;
+        }
+
+        &:active {
+          color: $color-purple;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
     &__btn {
-      padding: 11px 25px;
+      padding: 13px 25px 11px;
+      width: 115px;
+      text-align: center;
+      justify-self: center;
+      grid-column: 4 / 10;
+
+      @include screen-m {
+        grid-column: 9 / -1;
+        justify-self: end;
+      }
+    }
+
+    &__burger {
+      color: $color-white;
+      grid-column: 12 / -1;
+      padding-top: 3px;
+
+      i {
+        font-size: 35px;
+      }
+
+      .fa-times {
+        font-size: 35px;
+        display: none;
+      }
+
+      @include screen-m {
+        display: none;
+      }
     }
   }
 
   &-info {
     text-align: center;
     padding-top: 50px;
-
-    // &-container {
-    //   position: relative;
-    // }
 
     &__app-heading {
       color: $color-white;
