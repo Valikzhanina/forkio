@@ -1,0 +1,63 @@
+@import '../variables';
+@import '../mixins';
+.using-advantages {
+  @include screen-l {
+    position: relative;
+  }
+  &__title {
+    @include screen-l {
+      position: absolute;
+      right: 25px;
+    }
+  }
+  &__list {
+    margin-bottom: 64px;
+  }
+  &__item {
+    margin-top: 36px;
+  }
+  &__item-container {
+    @include screen-m {
+      display: flex;
+      margin: 0 30px;
+    }
+  }
+  &__item-container-text {
+    @include screen-m {
+      margin-left: 24px;
+      text-align: left;
+    }
+    @include screen-l {
+      width: 391px;
+    }
+  }
+  &__img-container {
+    width: 120px;
+    margin: 0 auto;
+    @include screen-m {
+      margin-left: 0px;
+      flex: none;
+    }
+  }
+  &__item-img {
+    text-align: center;
+    margin-bottom: 25px;
+    @include screen-m {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+    font-size: 16px;
+    @include screen-m {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  &__item-text {
+    font-family: $font-lato;
+    font-size: 14px;
+    color: $color-light-gray;
+  }
+}

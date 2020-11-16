@@ -1,0 +1,101 @@
+@import '../variables';
+@import '../mixins';
+.product-description {
+  padding-top: 130px;
+  text-align: center;
+
+  @include screen-m {
+    padding-top: 150px;
+    @include screen-l {
+      padding-top: 132px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin: 0 13px;
+    margin-bottom: 26px;
+    color: $color-dark-gray;
+    @include screen-m {
+      font-size: 42px;
+      margin-bottom: 33px;
+    }
+    @include screen-l {
+      font-size: 54px;
+      margin-bottom: 35px;
+    }
+  }
+  &__text {
+    font-family: $font-lato;
+    font-weight: normal;
+    color: $color-dark-gray;
+    font-size: 14px;
+    margin: 0 8px;
+    margin-bottom: 36px;
+    line-height: 20px;
+    @include screen-m {
+      font-size: 21px;
+      line-height: 32px;
+      margin: 0 40px;
+      margin-bottom: 24px;
+    }
+    @include screen-l {
+      margin: 0 200px;
+      margin-bottom: 13px;
+    }
+  }
+}
+
+.github-btns {
+  margin-bottom: 88px;
+}
+.github-btns-item {
+  display: flex;
+  //   padding-bottom: 88px;
+  flex-wrap: wrap;
+  gap: 11px;
+  justify-content: center;
+}
+.using-advantages {
+  position: relative;
+  padding-top: 32px;
+  @include screen-m {
+    padding-top: 62px;
+  }
+  @include screen-l {
+    background-color: #f9f9f9;
+  }
+  &__container {
+    @include screen-l {
+      display: flex;
+    }
+  }
+  &__title {
+    color: $color-purple;
+    font-size: 32px;
+    font-weight: bold;
+    @include screen-m {
+      font-size: 42px;
+    }
+    @include screen-l {
+      font-size: 48px;
+      top: 91px;
+    }
+  }
+  &__example {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    @include screen-m {
+      text-align: right;
+    }
+    @include screen-l {
+      background-color: #f9f9f9;
+      width: 650px;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+}
