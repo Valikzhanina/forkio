@@ -1,5 +1,7 @@
 body {
   font-family: $font-monserat;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 .container {
