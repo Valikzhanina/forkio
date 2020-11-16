@@ -64,6 +64,14 @@
   @include screen-m {
     padding-top: 62px;
   }
+  @include screen-l {
+    background-color: #f9f9f9;
+  }
+  &__container {
+    @include screen-l {
+      display: flex;
+    }
+  }
   &__title {
     color: $color-purple;
     font-size: 32px;
@@ -73,15 +81,21 @@
     }
     @include screen-l {
       font-size: 48px;
+      top: 91px;
     }
   }
   &__example {
     position: absolute;
-    left: 0px;
     overflow: hidden;
     width: 100%;
     @include screen-m {
       text-align: right;
+    }
+    @include screen-l {
+      background-color: #f9f9f9;
+      width: 600px;
+      bottom: 0px;
+      right: 0px;
     }
   }
 }

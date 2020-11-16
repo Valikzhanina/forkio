@@ -8,4 +8,7 @@ body {
   max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+  // @include screen-l {
+  //   padding: 0px 0px;
+  // }
 }
