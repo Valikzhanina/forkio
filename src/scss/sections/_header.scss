@@ -10,15 +10,25 @@
     background: #27262a;
     position: relative;
 
+    @include screen-m {
+      padding-bottom: 18px;
+    }
+
+    @include screen-l {
+      background: none;
+    }
+
     &-container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
 
       @include screen-m {
         padding: 0 20px;
+        grid-template-rows: repeat(2, 1fr);
       }
 
       @include screen-l {
+        grid-template-rows: 1fr;
         padding: 0 90px;
       }
     }
@@ -27,7 +37,7 @@
       background-image: url(../img/header-logo.svg);
       width: 43px;
       height: 41px;
-      grid-column: 1 / 2;
+      grid-column: 1 / 4;
 
       &--text {
         display: none;
@@ -39,35 +49,51 @@
         padding-left: 60px;
 
         @include screen-m {
+          grid-column: 1 / 2;
           display: inline-block;
         }
       }
 
       &:hover {
         background-image: url(../img/header-logo-hover.svg);
+        .header-navbar__logo--text {
+          color: $color-white;
+        }
       }
     }
 
     .menu {
       position: absolute;
-      bottom: -352px;
-      left: 0;
-      width: calc(100% - 15px);
+      bottom: -392px;
+      left: 15px;
+      background: #333333;
+      width: calc(100% - 30px);
 
       @include screen-m {
-        display: none;
+        all: unset;
+        display: flex;
+        justify-content: space-between;
+        align-self: end;
+        grid-column: 3 / 11;
+        grid-row: 2 / -1;
+      }
+
+      @include screen-l {
+        justify-content: space-evenly;
+        grid-column: 5 / 12;
+        grid-row: 1;
+        align-self: center;
       }
 
       &__item {
         position: relative;
-        box-sizing: border-box;
-        margin-left: 15px;
-        background: #333333;
         border-bottom: 3px solid #3b3b3b;
-        font-size: 26px;
-        color: $color-white;
-        height: 88px;
-        padding: 20px 0 21px 35px;
+        padding: 40px 0 29px 35px;
+
+        @include screen-m {
+          all: unset;
+          // margin-right: 47px;
+        }
 
         &::before {
           content: '';
@@ -76,15 +102,36 @@
           height: 53px;
           background: $color-purple;
           left: 3px;
-          top: 16px;
+          top: 22px;
           opacity: 0;
+
+          @include screen-m {
+            display: none;
+          }
         }
 
         &:active {
-          color: $color-purple;
+          .menu__link {
+            color: $color-purple;
+
+            @include screen-m {
+              color: $color-white;
+            }
+          }
           &::before {
             opacity: 1;
           }
+        }
+      }
+
+      &__link {
+        color: $color-white;
+        font-size: 26px;
+
+        @include screen-m {
+          color: $color-purple;
+          font-weight: bold;
+          font-size: 16px;
         }
       }
     }
@@ -92,12 +139,18 @@
     &__btn {
       padding: 13px 25px 11px;
       width: 115px;
+      text-transform: capitalize;
       text-align: center;
       justify-self: center;
       grid-column: 4 / 10;
 
       @include screen-m {
         grid-column: 9 / -1;
+        justify-self: end;
+      }
+
+      @include screen-l {
+        grid-column: -1 / -2;
         justify-self: end;
       }
     }
@@ -130,12 +183,28 @@
       color: $color-white;
       font-size: 48px;
       font-weight: bold;
+
+      @include screen-m {
+        font-size: 72px;
+      }
+
+      @include screen-l {
+        font-size: 82px;
+      }
     }
 
     &__app-description {
       color: $color-purple;
       font-size: 18px;
       margin: 19px 0 14px;
+
+      @include screen-m {
+        font-size: 18px;
+      }
+
+      @include screen-l {
+        font-size: 30px;
+      }
     }
 
     &__app-version {
@@ -143,22 +212,41 @@
       font-size: 14px;
       text-transform: uppercase;
       margin-bottom: 394px;
+
+      @include screen-l {
+        font-size: 16px;
+      }
     }
 
     &__download {
       position: relative;
       top: 48px;
 
+      @include screen-m {
+        top: 68px;
+      }
+
       &__btn {
         display: inline-block;
+        text-transform: capitalize;
         font-size: 18px;
         padding: 13px 29px;
+
+        @include screen-m {
+          border-radius: 33px;
+          font-size: 21px;
+          padding: 23px 61px;
+        }
       }
 
       &__info {
         color: $color-light-gray;
         font-size: 14px;
         margin-top: 13px;
+
+        @include screen-m {
+          margin-top: 19px;
+        }
       }
     }
   }
