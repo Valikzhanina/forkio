@@ -4,8 +4,20 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.hidden {
+  display: none;
 }

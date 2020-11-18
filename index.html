@@ -22,16 +22,66 @@
     />
     <link rel="stylesheet" href="./dist/css/styles.min.css" />
   </head>
+
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header-navbar">
+        <div class="header-navbar-container container">
+          <a href="#" class="header-navbar__logo">
+            <span class="header-navbar__logo--text">ForkIO</span>
+          </a>
+
+          <ul class="menu hidden">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Overview</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">About Fork</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Buying Options</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Support</a>
+            </li>
+          </ul>
+
+          <a href="#" class="header-navbar__btn btn">Buy Now</a>
+
+          <a href="#" class="header-navbar__burger">
+            <i class="fas fa-bars"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-info">
+        <div class="header-info-container container">
+          <h1 class="header-info__app-heading">Fork App</h1>
+          <p class="header-info__app-description">
+            A Real Gamechanger In The World Of Web-Development
+          </p>
+          <p class="header-info__app-version">v. 2.8 For Mac and Windows</p>
+
+          <div class="header-info__download">
+            <a href="#" class="header-info__download__btn btn"
+              >Download For Free Now</a
+            >
+            <p class="header-info__download__info">
+              Unlimited 30-Days Trial Period
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main>
       <section class="product-description">
         <div class="container">
-          <h2 class="product-description__title">Revolutionary  editor</h2>
+          <h2 class="product-description__title">Revolutionary editor</h2>
           <p class="product-description__text">
             Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui
             laoreet vulputate dignissim. Sed id metus id quam auctor molestie
-            eget ut augue.  
+            eget ut augue. 
           </p>
           <!-- github-btns -->
           <div class="github-btns">
@@ -64,7 +114,7 @@
           <div class="using-advantages">
             <div class="container">
               <div class="using-advantages__container">
-              <h2 class="using-advantages__title">&#60Here is what  you get 	&#62</h2>
+              <h2 class="using-advantages__title">&#60Here is what you get 	&#62</h2>
                 <ul class="using-advantages__list">
                   <li class="using-advantages__item">
                     <div class="using-advantages__item-container">
@@ -73,7 +123,7 @@
                        </div>
                       <div class="using-advantages__item-container-text">
                       <h3 class="using-advantages__item-title">Creatred to Make The Web Better</h3>
-                      <p class="using-advantages__item-text">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.  </p>
+                      <p class="using-advantages__item-text">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue. </p>
                     </div>
                       </div>
                   </li>
@@ -95,7 +145,7 @@
                       </div>
                       <div class="using-advantages__item-container-text">
                       <h3 class="using-advantages__item-title">Experimental Stuff</h3>
-                      <p class="using-advantages__item-text">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.   </p>
+                      <p class="using-advantages__item-text">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.  </p>
                     </div>
                       </div>
                   </li> 
@@ -107,7 +157,7 @@
                        </div>
                       <div class="using-advantages__item-container-text">
                       <h3 class="using-advantages__item-title">Creatred to Make The Web Better</h3>
-                      <p class="using-advantages__item-text">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.   </p>
+                      <p class="using-advantages__item-text">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.  </p>
                     </div>
                       </div>
                   </li>
@@ -117,7 +167,37 @@
             </div>
           </div>
       </section>
-      <section class="client-reviews">
+      <section class="reviews">
+        <div class="reviews-container container">
+          <h2 class="reviews-container-heading">People Are Talking About Fork</h2>
+          <div class="reviews-container-block">
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-smashing.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+            </div>
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-codrops.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+            </div>
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-w.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+            </div>
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-pixel-buddha.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+            </div>
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-cb.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">Praesent ut eros tristique, malesuada lectus vel, lobortis massa. Nulla faucibus lorem id arcu consequat faucibus.</p>
+            </div>
+            <div class="reviews-container-block__item">
+              <img src="./dist/img/reviews/logo-tnw.png" alt="logo" class="reviews-container-block__item__logo">
+              <p class="reviews-container-block__item__text">Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
+            </div>
+          </div>
+          <p class="reviews-container-bottom-text">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
       </section>
       <section class="subscription-plans"> 
         <div class="container">

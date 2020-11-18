@@ -1,0 +1,53 @@
+@import '../variables';
+@import '../mixins';
+
+.reviews {
+  background: $bg-reviews no-repeat center;
+  background-size: cover;
+  color: $color-white;
+  font-weight: bold;
+  margin-top: 20px;
+
+  @include screen-l {
+    margin-top: 40px;
+  }
+
+  &-container {
+    text-align: center;
+    padding-top: 57px;
+
+    &-heading {
+      font-size: 36px;
+    }
+
+    &-block {
+      font-family: $font-lato;
+      font-style: italic;
+      font-size: 16px;
+      padding: 8px 35px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__item {
+        @include screen-m {
+          width: calc((100% - 80px) / 2);
+        }
+
+        @include screen-l {
+          width: calc((100% - 180px) / 3);
+        }
+
+        &__logo {
+          padding: 45px 0 30px;
+        }
+      }
+    }
+
+    &-bottom-text {
+      font-weight: 400;
+      padding: 37px 25px 22px;
+      color: #a291a5;
+    }
+  }
+}
