@@ -12,18 +12,72 @@
     padding-bottom: 65px;
   }
   &__block {
-    // margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      'a '
+      'b'
+      'c'
+      'd';
 
     @include screen-m {
-      display: flex;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 15px;
       justify-content: center;
-      gap: 15px;
+      align-items: center;
+      grid-template-areas:
+        'a a a a b b b b'
+        'c c c c d d d d';
     }
     @include screen-l {
-      align-items: baseline;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-gap: 35px;
+      justify-content: center;
+      align-items: center;
+      grid-template-areas: 'a a b b c c d d';
+    }
+    .box-1 {
+      grid-area: a;
+      @include screen-m {
+        justify-self: end;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-2 {
+      grid-area: b;
+      @include screen-m {
+        justify-self: start;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-3 {
+      grid-area: c;
+      @include screen-m {
+        justify-self: end;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-4 {
+      grid-area: d;
+      @include screen-m {
+        justify-self: start;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
     }
   }
+
   &__line {
     color: $color-bgc-light-purple;
     margin-bottom: 14px;

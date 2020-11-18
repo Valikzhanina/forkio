@@ -3,18 +3,16 @@
   width: 257px;
   height: 457px;
   text-align: center;
-  margin: auto;
+  margin: 18px;
   background-color: $color-bgc-medium-purple;
   padding-bottom: 67px;
-  margin-bottom: 18px;
+  justify-self: center;
+
   @include screen-m {
-    // margin-right: 5px;
     justify-content: center;
-    width: calc(100% - 224) / 2;
   }
   @include screen-l {
     align-items: baseline;
-    width: calc(100% - 311) / 4;
   }
 
   &__title {
@@ -66,15 +64,7 @@
   &.selected {
     width: 299px;
     height: 560px;
-    // transform: scale(1.2);
     background-color: $color-bgc-medium-violet;
-    @include screen-m {
-      // margin-left: -20px;
-    }
-    @include screen-l {
-      // margin-left: 0px;
-      margin-bottom: -30px;
-    }
   }
   &.selected &__title {
     height: 111px;
