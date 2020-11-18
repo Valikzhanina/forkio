@@ -1,0 +1,106 @@
+@import '../variables';
+@import '../mixins';
+.subscription-plans {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: $color-bgc-dark-purple;
+  @include screen-m {
+    padding-top: 8px;
+  }
+  @include screen-l {
+    padding-top: 15px;
+    padding-bottom: 65px;
+  }
+  &__block {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      'a'
+      'b'
+      'c'
+      'd';
+
+    @media screen and (min-width: 650px) {
+      grid-gap: 15px;
+      justify-content: center;
+      align-items: center;
+      grid-template-areas:
+        'a b'
+        'c d';
+    }
+    @include screen-l {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-gap: 35px;
+      justify-content: center;
+      align-items: center;
+      grid-template-areas: 'a a b b c c d d';
+    }
+    .box-1 {
+      grid-area: a;
+      @media screen and (min-width: 650px) {
+        justify-self: end;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-2 {
+      grid-area: b;
+      @media screen and (min-width: 650px) {
+        justify-self: start;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-3 {
+      grid-area: c;
+      @media screen and (min-width: 650px) {
+        justify-self: end;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+    .box-4 {
+      grid-area: d;
+      @media screen and (min-width: 650px) {
+        justify-self: start;
+      }
+      @include screen-l {
+        justify-self: center;
+      }
+    }
+  }
+
+  &__line {
+    color: $color-bgc-light-purple;
+    margin-bottom: 14px;
+    margin: 0 36px;
+    @include screen-m {
+      margin: 0 96px;
+      margin-bottom: 98px;
+    }
+    @include screen-l {
+      margin: 0 290px;
+      margin-bottom: 112px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    text-align: center;
+    font-size: 28px;
+    color: $color-white;
+    line-height: 42px;
+    padding-bottom: 32px;
+  }
+  @include screen-m {
+    font-size: 42px;
+    line-height: 44px;
+  }
+  @include screen-l {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}
