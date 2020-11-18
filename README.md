@@ -11,8 +11,9 @@
 Состав участников проекта :
 
 Силич Ольга :
--header;
--reviews;
+
+- header;
+- reviews;
 
 Валикжанина Анна :
 - product-description;
