@@ -12,10 +12,9 @@
     padding-bottom: 65px;
   }
   &__block {
-    margin: auto;
+    // margin: auto;
 
     @include screen-m {
-      width: calc(100% - 224) / 2;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -23,7 +22,6 @@
     }
     @include screen-l {
       align-items: baseline;
-      width: calc(100% - 311) / 4;
     }
   }
   &__line {
