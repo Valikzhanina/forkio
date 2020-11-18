@@ -14,23 +14,19 @@
   &__block {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-      'a '
+      'a'
       'b'
       'c'
       'd';
 
-    @include screen-m {
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+    @media screen and (min-width: 650px) {
       grid-gap: 15px;
       justify-content: center;
       align-items: center;
       grid-template-areas:
-        'a a a a b b b b'
-        'c c c c d d d d';
+        'a b'
+        'c d';
     }
     @include screen-l {
       grid-template-columns: repeat(8, 1fr);
@@ -42,7 +38,7 @@
     }
     .box-1 {
       grid-area: a;
-      @include screen-m {
+      @media screen and (min-width: 650px) {
         justify-self: end;
       }
       @include screen-l {
@@ -51,7 +47,7 @@
     }
     .box-2 {
       grid-area: b;
-      @include screen-m {
+      @media screen and (min-width: 650px) {
         justify-self: start;
       }
       @include screen-l {
@@ -60,7 +56,7 @@
     }
     .box-3 {
       grid-area: c;
-      @include screen-m {
+      @media screen and (min-width: 650px) {
         justify-self: end;
       }
       @include screen-l {
@@ -69,7 +65,7 @@
     }
     .box-4 {
       grid-area: d;
-      @include screen-m {
+      @media screen and (min-width: 650px) {
         justify-self: start;
       }
       @include screen-l {
