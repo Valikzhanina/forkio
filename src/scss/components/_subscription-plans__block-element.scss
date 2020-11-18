@@ -1,0 +1,105 @@
+@import '../variables';
+.subscription-plans-element {
+  width: 257px;
+  height: 457px;
+  text-align: center;
+  margin: auto;
+  background-color: $color-bgc-medium-purple;
+  padding-bottom: 67px;
+  margin-bottom: 18px;
+  @include screen-m {
+    // margin-right: 5px;
+    justify-content: center;
+  }
+  @include screen-l {
+    align-items: baseline;
+  }
+
+  &__title {
+    background-color: $color-bgc-light-purple;
+    height: 97px;
+    box-sizing: border-box;
+    padding: 36px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+  &__price {
+    padding-top: 30px;
+    font-size: 60px;
+    font-weight: 700;
+    color: $color-white;
+  }
+  &__period {
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 38px;
+  }
+  &__line {
+    width: 60px;
+    height: 5px;
+    background-color: $color-purple;
+    margin-bottom: 30px;
+  }
+  &__advantages {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 37px;
+    padding: 0 20px;
+    line-height: 28px;
+  }
+  &__btn {
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 163px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: $color-bgc-light-purple;
+    border: $color-bgc-light-purple;
+    color: $color-white;
+  }
+  &.selected {
+    width: 299px;
+    height: 560px;
+    // transform: scale(1.2);
+    background-color: $color-bgc-medium-violet;
+    @include screen-m {
+      margin-left: -20px;
+    }
+    @include screen-l {
+      margin-left: 0px;
+      margin-bottom: -30px;
+    }
+  }
+  &.selected &__title {
+    height: 111px;
+    background-color: $color-bgc-dark-violet;
+  }
+  &.selected &__price {
+    padding-top: 14px;
+  }
+  &.selected &__price &__price-value {
+    font-size: 82px;
+    line-height: 84px;
+  }
+  &.selected &__price &__period {
+    padding-top: 16px;
+    padding-bottom: 46px;
+  }
+  &.selected &__line {
+    margin-bottom: 40px;
+  }
+  &.selected &__price &__advantages {
+    line-height: 32px;
+    margin-bottom: 83px;
+  }
+  &.selected &__price &__btn {
+    width: 190px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

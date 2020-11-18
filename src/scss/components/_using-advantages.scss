@@ -1,8 +1,13 @@
 @import '../variables';
 @import '../mixins';
 .using-advantages {
+  padding-bottom: 500px;
+  @include screen-m {
+    padding-bottom: 500px;
+  }
   @include screen-l {
     position: relative;
+    padding-bottom: 6px;
   }
   &__title {
     @include screen-l {
