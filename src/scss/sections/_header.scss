@@ -92,7 +92,11 @@
 
         @include screen-m {
           all: unset;
-          // margin-right: 47px;
+          color: $color-purple;
+
+          &:hover a {
+            color: $color-white;
+          }
         }
 
         &::before {
