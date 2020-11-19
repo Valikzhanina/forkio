@@ -19,7 +19,12 @@ function style() {
     .src('./src/scss/index.scss')
     .pipe(sass())
     .pipe(concat('styles.min.css'))
-    .pipe(autoprefixer())
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ['last 5 versions'],
+        cascade: true,
+      })
+    )
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./dist/css/'));
 }
